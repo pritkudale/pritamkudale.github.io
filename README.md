@@ -1,23 +1,20 @@
-# Pritam Kudale - Portfolio Website
+# Pritam Kudale — AI/ML Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
+A modern, responsive portfolio website tailored for an **AI/ML Engineer / GenAI Research Specialist** profile. It highlights selected work (LLM routing, vector search, CV), core skills, a brief experience snapshot, and credentials.
 
-## 🌐 Live Demo
+## ✨ Highlights
 
-Visit: [pritamkudale.github.io](https://pritamkudale.github.io)
+- **Professional AI/ML framing**: impact-oriented summary and metrics
+- **Core Skills**: grouped skills with tags (no “percent bars”)
+- **Selected Work**: real project cards with public links when available
+- **Experience Snapshot**: short, portfolio-style timeline (not a full resume)
+- **Credentials**: certifications, education, and community impact
+- **Static-friendly contact form**: opens a pre-filled **mailto:** message (works on GitHub Pages)
 
-## ✨ Features
-
-- **Modern Design**: Clean and attractive UI with gradient accents
-- **Fully Responsive**: Works perfectly on desktop, tablet, and mobile devices
-- **Smooth Animations**: Typing effect, scroll animations, and hover effects
-- **Interactive Elements**: Animated skill bars, statistics counter, and form validation
-- **Dark Theme**: Easy on the eyes with a professional dark color scheme
-
-## 🛠️ Technologies Used
+## 🧱 Tech Stack
 
 - HTML5
-- CSS3 (with CSS Variables, Flexbox, Grid)
+- CSS3 (CSS Variables, Flexbox, Grid)
 - Vanilla JavaScript
 - Font Awesome Icons
 - Google Fonts (Poppins, Fira Code)
@@ -25,82 +22,46 @@ Visit: [pritamkudale.github.io](https://pritamkudale.github.io)
 ## 📁 Project Structure
 
 ```
-pritamkudale/
-├── index.html      # Main HTML file
-├── styles.css      # All styles
-├── script.js       # JavaScript functionality
-└── README.md       # This file
+updated_portfolio/
+├── index.html
+├── styles.css
+├── script.js
+├── Pritam-Kudale-Resume.pdf
+└── README.md
 ```
 
-## 🚀 Deployment to GitHub Pages
+## 🚀 Deploy to GitHub Pages
 
-1. **Push to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Portfolio website"
-   git branch -M main
-   git remote add origin https://github.com/pritamkudale/pritamkudale.github.io.git
-   git push -u origin main
-   ```
+1. Push the folder contents to your GitHub Pages repo (e.g. `pritamkudale.github.io`).
+2. In GitHub: **Settings → Pages → Deploy from a branch**.
+3. Select the branch and root folder.
 
-2. **Enable GitHub Pages**:
-   - Go to your repository on GitHub
-   - Navigate to Settings → Pages
-   - Under "Source", select "Deploy from a branch"
-   - Select "main" branch and "/ (root)" folder
-   - Click Save
+## ✏️ Customization Checklist
 
-3. Your site will be live at `https://pritamkudale.github.io` within a few minutes!
+### 1) Update social links
+Edit `index.html`:
+- GitHub
+- LinkedIn
+- Email
+- Any publications / papers (optional)
 
-## ✏️ Customization
+### 2) Add/replace projects
+In `index.html`, update cards under **Selected Work**:
+- Title
+- Description
+- Tags
+- Live demo link
+- Paper / GitHub link
 
-### Personal Information
-Edit `index.html` to update:
-- Your name and title
-- About me section content
-- Contact information (email, phone, location)
-- Social media links
+> Tip: for private/proprietary work, keep the card but point links to `#contact`.
 
-### Skills
-Modify the skills section in `index.html` to match your expertise. Update the `data-progress` attribute to set skill levels.
+### 3) Update the resume file
+Replace `Pritam-Kudale-Resume.pdf` with your latest resume (same filename) so the download button stays working.
 
-### Projects
-Replace the placeholder projects with your actual work. Update:
-- Project titles and descriptions
-- Technology tags
-- Live demo and GitHub links
-- Project images (replace the placeholders)
-
-### Colors
-Customize the color scheme in `styles.css` by modifying the CSS variables at the top:
-```css
-:root {
-    --primary-color: #6c63ff;
-    --secondary-color: #f50057;
-    /* ... other variables */
-}
-```
-
-## 📧 Contact Form
-
-The contact form currently shows an alert on submission. To make it functional, you can:
-
-1. **Use Formspree**: Add your Formspree endpoint to the form action
-2. **Use Netlify Forms**: Add `netlify` attribute to the form if hosting on Netlify
-3. **Custom Backend**: Connect to your own backend API
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+### 4) Contact form behavior
+`script.js` uses a mailto-based flow. If you want a real form backend later:
+- Formspree, Netlify Forms, or a custom API endpoint.
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Made with ❤️ by Pritam Kudale
+This project can be used and modified freely (MIT-style).

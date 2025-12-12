@@ -1078,3 +1078,226 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================================================== 
+   Professional Content Layout (AI/ML Profile)
+   ========================================================================== */
+
+/* About stats: support 4+ metrics gracefully */
+.about-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Skills now use tags instead of progress bars */
+.skill-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-tags .tag {
+    background: var(--bg-tertiary);
+}
+
+/* Experience Section */
+.experience {
+    background: var(--bg-secondary);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.experience-card {
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.experience-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.experience-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.experience-date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.experience-company {
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.experience-points {
+    margin-top: 15px;
+    display: grid;
+    gap: 10px;
+}
+
+.experience-points li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.experience-points li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+}
+
+/* Projects background: alternate section color for cleaner rhythm */
+.projects {
+    background: var(--bg-primary);
+}
+
+/* Credentials Section */
+.credentials {
+    background: var(--bg-secondary);
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.credential-card {
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.credential-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.credential-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.credential-card:hover .credential-icon {
+    background: var(--gradient-primary);
+    color: var(--text-primary);
+}
+
+.credential-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.credential-list {
+    margin-top: 10px;
+    text-align: left;
+    display: grid;
+    gap: 10px;
+}
+
+.credential-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.credential-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+}
+
+/* Contact links + form note */
+.contact-link {
+    color: var(--text-secondary);
+    border-bottom: 1px dashed rgba(108, 99, 255, 0.6);
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--primary-color);
+}
+
+.form-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: -10px;
+}
+
+/* Scroll reveal (replaces JS-injected CSS) */
+.skill-card,
+.project-card,
+.experience-card,
+.credential-card,
+.contact-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.skill-card.active,
+.project-card.active,
+.experience-card.active,
+.credential-card.active,
+.contact-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        justify-content: flex-start;
+    }
+}
